@@ -1,6 +1,6 @@
 "use strict"
 
-let faas = require("./FaaSProvider");
+let faas = require("./faas");
 
 console.log(new faas({pluginManager: { setProvider:()=>{}, addPlugin: function(){} } },{}));
 

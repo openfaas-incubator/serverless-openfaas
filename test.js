@@ -2,7 +2,7 @@
 const expect = require('chai').expect;
 
 describe("FaaS provider", () => {
-    let FaaS = require("./FaaSProvider");
+    let FaaS = require("./faas");
 
     it("creates a new instance", ()=> {
         let serverless = { pluginManager: { setProvider:()=>{}, addPlugin: function(){} } } ;
