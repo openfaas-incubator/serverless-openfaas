@@ -17,7 +17,10 @@ class FaaSProvider {
 
   request() {
     console.log("Invoked with arguments: " + Object.keys(arguments));
-
+    return new BbPromise((resolve, reject) => {
+        let response = {status: "ok"};
+        resolve(response);
+    });
   }
 
 }
