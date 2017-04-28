@@ -1,11 +1,12 @@
 service: hello 
 
+plugins:
+  - serverless-faas
+
 provider:
-  name: faas
+  name: serverless-faas
   runtime: nodejs6.10
   functions:
     hello:
       handler: handler.hello
 
-plugins:
-      - serverless-faas
