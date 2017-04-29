@@ -2,17 +2,19 @@
 
 const BbPromise = require('bluebird');
 
-class FaaSProvider {
-  constructor(serverless, options) {
-    this.serverless=serverless;
-    this.options=options;
-    this.provider = provider;
+const constants = {
+  "providerName": "faas"
+};
 
-    this.serverless.setProvider(getProviderName(), this);
+class FaaSProvider {
+  constructor(serverless) {
+    this.serverless = serverless;
+    this.provider = this;
+    this.serverless.setProvider(constants.providerName, this);
   }
 
   static getProviderName() {
-    return "FaaS"
+    return constants.providerName;
   }
 
   request() {
