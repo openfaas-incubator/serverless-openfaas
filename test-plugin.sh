@@ -8,4 +8,4 @@ cp handler.js driver/
 cp package.json driver/
 
 cd driver/
-serverless
+SLS_DEBUG=* serverless $1 $2 $3 $4 $5
