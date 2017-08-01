@@ -1,18 +1,27 @@
 {
   "name": "serverless",
   "version": "1.0.0",
-  "description": "",
+  "description": "A provider plugin for the Serverless Inc framework (work-in-progress)",
   "main": "index.js",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "chai": "^3.5.0"
   },
   "devDependencies": {
     "mocha": "^3.3.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/_mocha test.js"
+    "test": "_mocha test.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexellis/serverless-faas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexellis/serverless-faas/issues"
+  },
+  "homepage": "https://github.com/alexellis/serverless-faas#readme"
 }

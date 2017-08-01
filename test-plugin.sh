@@ -1,7 +1,9 @@
 #!/bin/bash
 
 rm -rf driver
-mkdir -p driver/node_modules/
+mkdir driver
+
+cp -r node_modules driver/
 cp -r faas driver/node_modules/serverless-faas
 cp serverless.yml driver/
 cp handler.js driver/
