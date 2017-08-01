@@ -14,6 +14,8 @@ cd driver/
 SLS_DEBUG=* serverless $1 $2 $3 $4 $5
 SLS_DEBUG=* serverless deploy
 echo "deployed"
-# SLS_DEBUG=* serverless invoke -f hello -l
+SLS_DEBUG=* serverless invoke -f hello -l
+echo "Hello invoked"
+
 SLS_DEBUG=* serverless remove
 echo "removed"
