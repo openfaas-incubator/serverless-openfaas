@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.5.0"
+    "bluebird": "^3.5.0",
+    "extract-zip": "^1.6.5"
   },
   "devDependencies": {},
   "description": ""

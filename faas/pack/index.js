@@ -6,28 +6,36 @@ const BbPromise = require('bluebird');
 const promisify = require('../promisify-spawn');
 const listeners = require('../spawn-listener');
 
-class FaaSRemove {
+class FaaSPackage {
 	constructor(serverless, options) {
 		this.serverless = serverless;
 		this.options = options || {};
 		this.provider = this.serverless.getProvider('faas');
+//		This.commands = {
+//			package: {
+//				lifecycleEvents: [
+//					'package'
+//				],
+//				usage: 'Bundle function for deployment on OpenFaaS'
+//			}
+//		};
 
 		this.hooks = {
-			'remove:remove': () => BbPromise.bind(this).then(this.removeFunction)
+			'after:package:createDeploymentArtifacts': () => BbPromise.bind(this).then(this.packageFunction)
 		};
-
-//		This.serverless.cli.log('Configuring FaaS Remove plugin');
 	}
 
-	removeFunction() {
+	packageFunction() {
+		this.serverless.cli.log('Attempting to package');
+
 		return new BbPromise(resolve => {
 			_.each(this.serverless.service.functions, (description, name) => {
-				this.serverless.cli.log('Attempting to remove ' + name);
+				this.serverless.cli.log('Attempting to package ' + name);
 
-				const faasCli = spawn('faas-cli', ['remove', name]);
+				const faasCli = spawn('faas-cli', ['build', '-f', './serverless.yml']);
 
 				promisify(faasCli)
-					.then(res => this.serverless.cli.log(`Function ${name} has been remove.`))
+					.then(res => this.serverless.cli.log(`Function ${name} has been packaged`))
 					.then(() => resolve())
 					.catch(err => this.serverless.cli.log(err));
 
@@ -37,4 +45,4 @@ class FaaSRemove {
 	}
 }
 
-module.exports = FaaSRemove;
+module.exports = FaaSPackage;
