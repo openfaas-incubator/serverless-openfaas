@@ -1,40 +1,42 @@
 This is an OpenFaaS plugin for the Serverless Inc framework.
 
-## Wanted OpenFaaS?
+## Were you looking for OpenFaaS?
 
-You are probably looking for [OpenFaaS - alexellis/faas](https://github.com/alexellis/faas).
+You are probably looking for [OpenFaaS - openfaas/faas](https://github.com/alexellis/faas).
 
 ## serverless-faas
 
 ### Testing Instructions
 
-#### Prereq's
+#### Prereqs
 
-NodeJS 6 or higher
+* NodeJS 6+
+* Docker 17.05+
+* faas-cli
 
-Docker 1.13 or higher
+Get the OpenFaaS CLI:
 
-faas-cli
 ```
 $ curl -sSL https://cli.openfaas.com | sudo sh
 ```
 
-#### Prep the environment
+#### Prepare the environment
 
 ###### Get the plugin
+
 ```
-$ git clone https://github.com/austinfrey/serverless-faas
-$ cd serverless-faas
-$ npm install
-$ git checkout forked_cmds
+$ git clone https://github.com/openfaas/serverless-faas
+$ ./prep.sh
 ```
 
 ###### Test all commands with a script
+
 ```
 $ ./test-plugin.sh
 ```
 
 ###### Manually test commands
+
 Run `./test-plugin.sh` then:
 ```
 $ cd driver/faas-func
@@ -51,4 +53,3 @@ sls deploy list
 sls invoke -f <your-function> -d <your-data> # -d flag optional
 sls remove
 ```
-
