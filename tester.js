@@ -1,6 +1,6 @@
 'use strict';
 
-const Faas = require('./faas');
+const OpenFaaS = require('./faas');
 
-console.log(new Faas({pluginManager: {setProvider: () => {}, addPlugin() {}}}, {}));
-
+let openFaaS = new OpenFaaS({ pluginManager: { setProvider: () => {}, addPlugin() {} } }, {})
+console.log(openFaaS);
