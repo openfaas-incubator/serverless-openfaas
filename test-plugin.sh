@@ -31,6 +31,8 @@ serverless invoke -f hello-serverless
 
 serverless deploy function -f hello-serverless
 
+sleep 10
+
 serverless deploy list
 
 serverless invoke -f hello-serverless
