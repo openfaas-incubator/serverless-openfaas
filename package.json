@@ -1,8 +1,8 @@
 {
-  "name": "serverless",
+  "name": "serverless-faas",
   "version": "1.0.0",
   "description": "A provider plugin for the Serverless Inc framework (work-in-progress)",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "bluebird": "^3.5.0",
     "dockerode": "^2.5.0",
