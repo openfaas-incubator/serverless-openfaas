@@ -4,7 +4,7 @@ This is an OpenFaaS plugin for the Serverless Inc framework.
 
 You are probably looking for [OpenFaaS - openfaas/faas](https://github.com/alexellis/faas).
 
-## serverless-faas
+## serverless-openfaas
 
 ### Testing Instructions
 
@@ -25,7 +25,7 @@ $ curl -sSL https://cli.openfaas.com | sudo sh
 ###### Get the plugin
 
 ```
-$ git clone https://github.com/openfaas/serverless-faas
+$ git clone https://github.com/openfaas/serverless-openfaas
 $ ./prep.sh
 ```
 
