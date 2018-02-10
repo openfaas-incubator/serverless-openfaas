@@ -20,18 +20,15 @@ $ curl -sSL https://cli.openfaas.com | sudo sh
 
 ## Getting started
 
-* Install `serverless` npm module:
-
-```
-$ npm i -g serverless
-```
-
 * Get this plugin
 
 ```
 $ git clone https://github.com/openfaas/serverless-openfaas
 $ ./prep.sh
 ```
+
+> This will install the `serverless` npm module.
+
 
 * Test all commands with a script
 
