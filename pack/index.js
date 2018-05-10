@@ -3,11 +3,9 @@
 
 'use strict';
 
-const {spawn} = require('child_process');
 const _ = require('lodash');
 const BbPromise = require('bluebird');
-const promisify = require('../promisify-spawn');
-const listeners = require('../spawn-listener');
+const FaasCli = require("../faas-cli");
 
 class OpenFaasPackage {
 	constructor(serverless, options) {
@@ -35,17 +33,15 @@ class OpenFaasPackage {
 
 			this.serverless.cli.log('Running packageFunction');
 
+			let cli = new FaasCli(this.serverless.cli);
+
 			_.each(this.serverless.service.functions, (description, name) => {
 				this.serverless.cli.log('Attempting to package ' + name);
 
-				const faasCli = spawn('faas-cli', ['build', '-f', './serverless.yml']);
-
-				promisify(faasCli)
-					.then(res => this.serverless.cli.log(`Function ${name} has been packaged`))
+				cli.build(name)
+					.then((res) => this.serverless.cli.log(`Function ${name} has been packaged`))
 					.then(() => resolve())
 					.catch(err => this.serverless.cli.log(err));
-
-				listeners(faasCli);
 			});
 		});
 	}
