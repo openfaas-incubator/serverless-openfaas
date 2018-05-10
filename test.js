@@ -1,7 +1,10 @@
+// Copyright (c) OpenFaaS Authors 2017. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 'use strict';
 const expect = require('chai').expect;
 
-describe('FaaS provider', () => {
+describe('OpenFaaS provider', () => {
     const OpenFaaS = require('./lib');
 
     it('creates a new instance', () => {

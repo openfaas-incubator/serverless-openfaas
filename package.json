@@ -1,6 +1,6 @@
 {
   "name": "serverless-openfaas",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A provider plugin for the Serverless Inc framework (work-in-progress)",
   "main": "lib/index.js",
   "dependencies": {
@@ -23,10 +23,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexellis/serverless-openfaas.git"
+    "url": "git+https://github.com/openfaas/serverless-openfaas.git"
   },
   "bugs": {
-    "url": "https://github.com/alexellis/serverless-openfaas/issues"
+    "url": "https://github.com/openfaas/serverless-openfaas/issues"
   },
-  "homepage": "https://github.com/alexellis/serverless-openfaas#readme"
+  "homepage": "https://github.com/openfaas/serverless-openfaas#readme"
 }

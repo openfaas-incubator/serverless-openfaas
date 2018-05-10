@@ -2,21 +2,36 @@ This is an OpenFaaS plugin for the Serverless Inc framework.
 
 # Were you looking for OpenFaaS?
 
-You are probably looking for [OpenFaaS - openfaas/faas](https://github.com/alexellis/faas).
+You are probably looking for [OpenFaaS - openfaas/faas](https://github.com/openfaas/faas).
 
 # serverless-openfaas
 
 ## Pre-reqs
 
-* NodeJS 6+
+* [Node.js 8 or newer](https://nodejs.org/en/download/)
+* Serverless Inc CLI (sls)
 * Docker 17.05+
-* faas-cli
+* OpenFaaS & CLI (faas-cli)
+
+Installation:
+
+* Serverless Inc CLI (sls)
+
+```
+sudo npm i -g serverless
+```
 
 * Get the OpenFaaS CLI:
 
 ```
 $ curl -sSL https://cli.openfaas.com | sudo sh
 ```
+
+Or install via `brew install faas-cli`.
+
+* Get OpenFaaS
+
+You can deploy OpenFaaS locally or remotely with Docker Swarm or Kubernetes. [See the documentation](https://docs.openfaas.com/)
 
 ## Getting started
 
@@ -28,7 +43,6 @@ $ ./prep.sh
 ```
 
 > This will install the `serverless` npm module.
-
 
 * Test all commands with a script
 
