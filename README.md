@@ -6,6 +6,15 @@ You are probably looking for [OpenFaaS - openfaas/faas](https://github.com/openf
 
 # serverless-openfaas
 
+Status: This plugin for the Serverless Inc Framework is under development - help is wanted.
+
+Work remaining:
+
+* [ ] Documentation on using OpenFaaS with the Serverless Inc framework
+* [ ] Validation of plugin from Serverless Inc team
+* [ ] Validation of [node.js template](https://github.com/openfaas/serverless-openfaas-nodejs) from Serverless Inc team
+* [ ] Breaking out of SDK for spawning `faas-cli`
+
 ## Pre-reqs
 
 * [Node.js 8 or newer](https://nodejs.org/en/download/)
@@ -58,10 +67,9 @@ $ cd driver/faas-func
 $ sls <command>
 ```
 
-## Currently supported commands
+## Supported commands
 
 ```
-sls init
 sls package
 sls deploy
 sls deploy function -f <your-function>
