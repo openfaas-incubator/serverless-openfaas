@@ -17,16 +17,9 @@ serverless install --url \
 # https://github.com/horike37/serverless-openfaas-template \
 
 #For K8s
-sed -ie s/8080/31112/g openfaas-hello-world/serverless.yml
+# sed -ie s/8080/31112/g openfaas-hello-world/serverless.yml
 
-cd ..
-
-# Copy in node_modules and faas provider developer version
-# cp -r node_modules driver/openfaas-hello-world/
-# cp -r lib driver/openfaas-hello-world/node_modules/serverless-openfaas
-
-cd driver/openfaas-hello-world
-#node --inspect-brk=0.0.0.0:9229 sls package
+cd openfaas-hello-world
 
 # Run the workflow
 

@@ -48,23 +48,18 @@ You can deploy OpenFaaS locally or remotely with Docker Swarm or Kubernetes. [Se
 
 ```
 $ git clone https://github.com/openfaas/serverless-openfaas
+```
+
+Link the plugin so it's available to Node:
+
+```
 $ ./prep.sh
 ```
 
-> This will install the `serverless` npm module.
-
-* Test all commands with a script
+* Test the happy-path: build/deploy/list/invoke/remove
 
 ```
 $ ./test-plugin.sh
-```
-
-* Manually test commands
-
-Run `./test-plugin.sh` then:
-```
-$ cd driver/faas-func
-$ sls <command>
 ```
 
 ## Supported commands
@@ -77,3 +72,7 @@ sls deploy list
 sls invoke -f <your-function> -d <your-data> # -d flag optional
 sls remove
 ```
+
+## Contributing
+
+Help is wanted. Please see the [contributing guide](./CONTRIBUTING.md)
