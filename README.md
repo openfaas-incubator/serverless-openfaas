@@ -32,6 +32,8 @@ sudo npm i -g serverless
 
 * Get the OpenFaaS CLI:
 
+> Note: until 0.6.9 of the CLI is released you will need to rebuild it from source. `git clone https://github.com/openfaas/faas-cli` and `cd faas-cli && ./build_redist.sh`
+
 ```
 $ curl -sSL https://cli.openfaas.com | sudo sh
 ```
