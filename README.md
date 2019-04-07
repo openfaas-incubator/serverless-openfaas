@@ -4,11 +4,13 @@ You are probably looking for [OpenFaaS - openfaas/faas](https://github.com/openf
 
 # Status
 
-Status: This plugin for the Serverless Inc. Framework is partially complete, but due to a lack of hands-on support from the Serverless Inc. team or demand from the OpenFaaS community it has not been finished.
+This is a plugin for the "serverless" JavaScript framework by Serverless Inc. At the time of the last commit it was operational.
 
 At time of writing the OpenFaaS CLI has between 500-600 commits and is written entirely in Go. Go is a fast and efficient language for building CLIs and allows code re-use between the CLI and other components in the project.
 
-Despite the promise of portability between frameworks the maintainers feel there is a weak argument for rewriting all this code, knowledge and bug fixes in JavaScript. The OpenFaaS CLI is capable of building the immutable Docker images required for OpenFaaS and working with the OpenFaaS API and existing developer workflow.
+Despite the claim of portability between frameworks or clouds the maintainers feel there is a weak argument for rewriting all this code, knowledge and bug fixes in JavaScript. The OpenFaaS CLI is capable of building the immutable Docker images required for OpenFaaS and working with the OpenFaaS API and existing developer workflow.
+
+The OpenFaaS Go CLI is portable between all private/public and private clouds without the need for JavaScript or any third-parties.
 
 If you landed on this page, use the [openfaas/faas-cli](https://github.com/openfaas/faas-cli] written in Go which is:
 
