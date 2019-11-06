@@ -12,7 +12,7 @@ Despite the claim of portability between frameworks or clouds the maintainers fe
 
 The OpenFaaS Go CLI is portable between all private/public and private clouds without the need for JavaScript or any third-parties.
 
-If you landed on this page, use the [openfaas/faas-cli](https://github.com/openfaas/faas-cli] written in Go which is:
+If you landed on this page, use the [openfaas/faas-cli](https://github.com/openfaas/faas-cli) written in Go which is:
 
 * Actively developed with a roadmap
 * Supported by community and maintainers
